@@ -1,0 +1,663 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("font/Poppins-Regular.ttf");
+}
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    font-family: "Poppins";
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background: url("img/bg.jpeg") center/cover no-repeat fixed;
+    max-width: 100%;
+}
+
+a {
+    color: white;
+}
+
+/*******************
+**     header     **
+*******************/
+
+.hero {
+    height: 100vh;
+}
+
+header .animatedText-accueil::before {
+    content: "";
+    animation: anim1 12s infinite;
+}
+
+@keyframes anim1 {
+    0% {
+        content: "Attique."
+    }
+
+    20% {
+        content: "Péloponnèse."
+    }
+
+    40% {
+        content: "Epire."
+    }
+
+    60% {
+        content: "Thessalie."
+    }
+
+    80% {
+        content: "Crête."
+    }
+
+    100% {
+        content: "Attique."
+    }
+
+}
+
+/*******************
+**    navbar     **
+*******************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+
+nav#navbar-dyn {
+    position:absolute;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+nav #logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 1.2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    transition: width 0.3s;
+    margin: 0 auto;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+nav ul li a img.navbar-icon {
+    width: 30px;
+    height: auto;
+    display: none;
+    margin-top: 5px;
+}
+
+nav ul li a .text {
+    display: inline-block;
+}
+
+@media (max-width: 1000px) {
+    nav ul li a .text {
+        display: none;
+    }
+    nav ul li a img.navbar-icon {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
+/*******************
+**      main      **
+*******************/
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.cadre-container {
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.cadre {
+    width: 75vw;
+    height: 60vh;
+    background: url("img/topography.svg");
+    background-color: #333333;
+    border: 1px solid #333333;
+    border-radius: 21px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0.95;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cadre-img {
+    width: 50%;
+}
+
+.cadre-img img {
+    padding: 0.5rem;
+    max-height: 25vh;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 1rem;
+    width: 75%;
+}
+
+.cadre-text {
+    margin: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+    width: 50%;
+    font-size: 125%;
+}
+
+.cadre-text h2 {
+    font-size: 200%;
+    margin-bottom: 20px;
+}
+
+.cadre-text p {
+    margin-top: 20px;
+}
+
+section:nth-of-type(even) .cadre {
+    flex-direction: row-reverse;
+}
+
+section:nth-of-type(even) .cadre-text {
+    margin-left: 2.5rem;
+    margin-right: 0;
+}
+
+@media (max-width:1000px) {
+    .cadre, section:nth-of-type(even) .cadre {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cadre-img {
+        width: 100%;
+    }
+
+    .cadre-text, section:nth-of-type(even) .cadre-text {
+        width: 100%;
+        margin:inherit;
+        margin-top:2rem;
+        font-size:75%;
+    }
+
+    .cadre-text h2 {
+        font-size: 150%;
+    }
+
+    .cadre-text p {
+        margin:0 2rem;
+    }
+}
+
+/******************
+**     footer     **
+*******************/
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/******************
+**     reserver     **
+*******************/
+
+.form-container {
+    color:black;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+.required::after {
+    content: " *";
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1rem;
+    }
+}
+
+/******************
+**     desti     **
+*******************/
+
+.monu-wrapper {
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.section-titre {
+    text-align: center;
+    font-size: 3rem;
+    margin: 12rem auto 0 auto;
+    flex:0 0 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.monu-container {
+    height:400px;
+    display: flex;
+}
+
+.monu {
+    width:80px;
+    border-radius: 21px;
+    overflow:hidden;
+    margin: 0 10px;
+    display:flex;
+    align-items:flex-end;
+    transition: 0.6s cubic-bezier(.59,-0.24,.4,1.26);
+    box-shadow:0px 10px 30px -5px rgba(0,0,0,0.9);
+}
+
+.monu > .monu-ligne {
+    display:flex;
+    flex-wrap:nowrap;
+    backdrop-filter: blur(3px);
+    background:rgb(0,0,0,0.5);
+}
+
+.monu > .monu-ligne > .monu-icon {
+    background: lightsalmon;
+    border-radius: 900000px;
+    width:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    margin-right:15px;
+}
+
+.monu > .monu-ligne > .monu-desc {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    height:60px;
+    width:800px;
+    opacity:0;
+    transform:translateY(30px);
+    transition: all 0.3s ease;
+}
+
+.monu-title {
+    text-transform: uppercase;
+    padding-top:5px;
+}
+
+.monu-input {
+    display:none;
+}
+
+.monu-input:checked + label {
+    width: 800px;
+}
+
+.monu-input:checked + label .monu-desc{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.monu[for="1"] {
+    background: url("img/acropole.jpg") center/cover no-repeat;
+}
+.monu[for="2"] {
+    background: url("img/dionysos.jpg") center/cover no-repeat;
+}
+.monu[for="3"] {
+    background: url("img/delphes.jpg") center/cover no-repeat;
+}
+.monu[for="4"] {
+    background: url("img/sparte.jpg") center/cover no-repeat;
+}
+
+.voyage h2 {
+    margin-bottom:120px;
+}
+
+.voyage-container {
+    padding:0 250px;
+}
+
+.voyage-list {
+    margin-bottom: 50px;
+}
+
+.voyage-item {
+    display:grid;
+    grid-template-columns: 1.2fr 1.5fr 1fr;
+    background:whitesmoke;
+    border-radius: 21px;
+    margin-bottom:50px;
+}
+
+.voyage-img {
+    height:100%;
+}
+
+.voyage-img img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 21px 0 0 21px;
+}
+
+.voyage-text {
+    padding:2rem;
+}
+
+.voyage-titre {
+    font-size:30px;
+    font-weight:800;
+    text-transform: uppercase;
+    color:black;
+    margin-bottom:15px;
+}
+.voyage-desc {
+    font-size:15px;
+    color:black;
+    margin-bottom:20px;
+}
+
+.voyage-info {
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:8px;
+    border-radius: 75px;
+    box-shadow:0px 10px 30px -5px rgba(0,0,0,0.9);
+    max-width:max-content
+}
+
+.voyage-info li {
+    position:relative;
+}
+
+.voyage-info li div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    padding:8px;
+    color:grey;
+    font-size:12px;
+}
+
+.voyage-prix {
+    display:grid;
+    place-content: center;
+    background:#2594c1;
+    text-align:center;
+    border-radius: 0 21px 21px 0;
+}
+
+.voyage-prix p {
+    font-size:65px;
+    font-weight: 1000;
+    margin-bottom:20px;
+}
+
+.voyage-prix p span {
+    display:block;
+    font-size:15px;
+    font-weight: initial;
+}
+
+.btn {
+    margin:auto;
+    padding:12px 30px;
+    background:none;
+    border-color:white;
+    text-transform: uppercase;
+    border-radius:100px;
+}
+
+a > .btn {
+    color:white;
+}
+
+@media (max-width:1200px) {
+    .voyage-container {
+        padding:0 100px;
+    }
+    .voyage-item {
+        grid-template-columns: initial;
+        grid-template-rows: 1fr 0.8fr 0.6fr;
+    }
+
+    .voyage-img img {
+        border-radius: 21px 21px 0 0;
+    }
+
+    .voyage-prix {
+        border-radius:0 0 21px 21px;
+    }
+
+    .voyage-prix p {
+        font-size: 40px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .voyage-container {
+        padding:0 50px;
+    }
+
+    .voyage-prix p {
+        font-size: 30px;
+    }
+}
+  
+@media (max-width:1000px) {
+    .monu-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .monu-input:checked + label {
+        width: initial;
+    }
+
+    .monu {
+        width: 600px;
+        overflow: hidden;
+        margin:10px 0;
+    }
+
+    .monu > .monu-ligne > .monu-desc {
+        width: 520px;
+    }
+
+    .monu-input:checked + label {
+        height:340px;
+    }
+}
+
+@media (max-width:768px) {
+    .monu-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .monu-input:checked + label {
+        width: initial;
+    }
+
+    .monu {
+        width: 400px;
+        overflow: hidden;
+        margin:10px 0;
+    }
+
+    .monu > .monu-ligne > .monu-desc {
+        width: 320px;
+    }
+
+    .monu-input:checked + label {
+        height:340px;
+    }
+
+    .monu-ligne {
+        height:50px;
+    }
+    .monu-title {
+        padding:0;
+    }
+
+    .monu-text {display:none;}
+
+}
+
+/******************
+**     sources     **
+*******************/
+.sources {
+    background:black;
+    color:white;
+}
+
+.sources main {
+    height: 100vh;
+}
+
+/******************
+**     panthéon     **
+*******************/
