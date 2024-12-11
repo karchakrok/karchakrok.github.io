@@ -25,7 +25,7 @@
         <div class="form-container">
             <h1>Réserver votre voyage en Grèce</h1>
             <p>Remplissez ce formulaire pour réserver votre aventure mythologique en Grèce. Nous vous contacterons bientôt pour finaliser votre réservation.</p>
-            <form>
+            <form action="/confirmReservation.html">
                 <fieldset>
                     <legend>Informations personnelles</legend>
                     <label for="nom" class="required">Nom</label>
@@ -51,7 +51,7 @@
                     <input type="number" id="temps" name="temps" required>
                     <fieldset>
                         <legend>Qui voyage avec vous ?</legend>
-                        <label><input type="radio" id="type_personnes_seul" name="type_personnes" value="Je voyage seul" required><span>Je voyage seul</span></label>
+                        <label><input type="radio" id="type_personnes_seul" name="type_personnes" value="Je voyage seul"><span>Je voyage seul</span></label>
                         <label><input type="radio" id="type_personnes_couple" name="type_personnes" value="Couple"><span>Couple</span></label>
                         <label><input type="radio" id="type_personnes_famille" name="type_personnes" value="Famille"><span>Famille</span></label>
                         <label><input type="radio" id="type_personnes_amis" name="type_personnes" value="Groupe d'amis"><span>Groupe d'amis</span></label>
@@ -69,7 +69,7 @@
                 <label for="commentaires">Commentaires (précisez ici tout ce qui vous semble utile afin que l'on puisse préparer un voyage fait pour vous.)</label>
                 <textarea name="commentaires" id="commentaires" cols="30" rows="10"></textarea>
 
-                <button type="submit">Réserver</button>
+                <input type="submit" value="Réserver">
             </form>
         </div>
     </main>
