@@ -549,11 +549,25 @@ footer {
 
 .btn {
     margin:auto;
-    padding:12px 30px;
+    padding: 12px 30px;
     background:none;
-    border: 1px solid white;
+    border-color:white;
     text-transform: uppercase;
+    font-size: smaller;
     border-radius:100px;
+    border-top: 2px solid #808080; border-left: 2px solid #808080;
+    border-bottom: 2px solid #f5f5f5; border-right: 2px solid #f5f5f5;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #2185ad;
+    cursor: pointer;
+}
+
+.btn:active {
+    border-top: 2px solid #f5f5f5;; border-left: 2px solid #f5f5f5;
+    border-bottom: 2px solid #808080; border-right: 2px solid #808080
 }
 
 @media (max-width:1200px) {
@@ -677,10 +691,10 @@ section.pantheon {
 }
 
 .menu-selection {
-    overflow-y: auto;
-    max-height: 50vh;
-    padding:0;
-    text-align: center;
+    height:79.8vh;
+   display:flex;
+   flex-direction: column;
+   overflow-y: scroll;
 }
 
 .menu-image {
@@ -691,48 +705,27 @@ section.pantheon {
     padding: 0 1rem;
 }
 
-.zeus .hera .poseidon .demeter .ares .athena .apollo .artemis .hephaistos .aphrodite .hermes .hestia .hades {
+.zeus .hera .poseidon .demeter .ares .athena .apollo .artemis .hephaistos .aphrodite .hermes .hestia {
     display:none;
 }
 
-section.pantheon input[type="radio"] {
+.menu-selection input[type="radio"] {
     display:none;
 }
 
-section.pantheon input[type="radio"]:checked + label {
+.menu-selection input[type="radio"]:checked + label {
     background: #333;
-    border-radius: 5px;
-    margin-left: 35px;
-    margin-right: 35px;
-
+    border-radius: 15px;
 }
 
-section.pantheon label {
-    display: block;
+.menu-selection label {
     padding: 1rem;
     margin: 1rem;
-    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 section.pantheon img {
     width: 100%;
     border-radius: 5px;
 }
-
-section.pantheon .zeus,
-section.pantheon .hera,
-section.pantheon .poseidon,
-section.pantheon .demeter,
-section.pantheon .ares,
-section.pantheon .athena,
-section.pantheon .apollo,
-section.pantheon .artemis,
-section.pantheon .hephaistos,
-section.pantheon .aphrodite,
-section.pantheon .hermes,
-section.pantheon .hestia {
-    display: none;
-}
-
