@@ -345,16 +345,6 @@ footer {
     }
 }
 
-.confirmReservation {
-    background:black;
-    text-align: center;
-    margin:50px auto;
-}
-
-.confirmReservation a {
-    color:blue;
-}
-
 /******************
 **     desti     **
 *******************/
@@ -669,63 +659,104 @@ footer {
 /******************
 **     sources     **
 *******************/
-.sources {
+
+.alt {
     background:black;
-    color:white;
+    text-align: center;
+    margin:50px auto;
 }
 
-.sources main {
+.alt a {
+    color:blue;
+}
+
+.alt main {
     height: 100vh;
 }
 
 /******************
-**     panthéon     **
+**    faq     **
 *******************/
 
-section.pantheon {
-    width:85vw;
-    margin: 0 auto;
-    display:grid;
-    grid-template-columns: 0.5fr 1fr 0.7fr;
-    grid-gap: 1rem;    
-}
-
-.menu-selection {
-    height:79.8vh;
-   display:flex;
-   flex-direction: column;
-   overflow-y: scroll;
-}
-
-.menu-image {
-    padding: 0 1rem;
-}
-
-.menu-texte {
-    padding: 0 1rem;
-}
-
-.zeus .hera .poseidon .demeter .ares .athena .apollo .artemis .hephaistos .aphrodite .hermes .hestia {
-    display:none;
-}
-
-.menu-selection input[type="radio"] {
-    display:none;
-}
-
-.menu-selection input[type="radio"]:checked + label {
-    background: #333;
-    border-radius: 15px;
-}
-
-.menu-selection label {
-    padding: 1rem;
-    margin: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-section.pantheon img {
-    width: 100%;
+.faq-container {
+    max-width: 80vw;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
     border-radius: 5px;
+    color:black;
+    box-shadow: 0 2px 5px grey;
+}
+  
+  details {
+    border: 1px solid #2185ad;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    margin-bottom:10px;
+    cursor:pointer;
+  }
+  
+  summary {
+    font-weight: 600;
+    font-size: 20px;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  
+  details[open] {
+    padding: 0.5em; 
+  }
+  
+  details:hover{
+     background-color:	 rgba(173,216,230,0.5);
+  }
+
+  details summary::after{
+    content:"+";
+    float:right;
+    font-size:1.2em;
+    color:#2594c1;
+  }
+  
+  details[open] summary::after{
+    content:"-";
+    float:right;
+    font-size:1.5em;
+  }
+
+/******************
+**    pantheon     **
+*******************/
+
+.pantheon {
+    max-width:800px;
+    margin: 0 auto;
+}
+
+.pantheon-container {
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.pantheon-img {
+    flex: 0 0 150px;
+    margin:1em;
+}
+
+.pantheon-img img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.pantheon-text {
+    flex: 1;
+    padding:1em;
 }
