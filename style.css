@@ -551,13 +551,9 @@ footer {
     margin:auto;
     padding:12px 30px;
     background:none;
-    border-color:white;
+    border: 1px solid white;
     text-transform: uppercase;
     border-radius:100px;
-}
-
-a > .btn {
-    color:white;
 }
 
 @media (max-width:1200px) {
@@ -695,7 +691,7 @@ section.pantheon {
     padding: 0 1rem;
 }
 
-.zeus .hera .poseidon .demeter .ares .athena .apollo .artemis .hephaistos .aphrodite .hermes .dionysus .hades {
+.zeus .hera .poseidon .demeter .ares .athena .apollo .artemis .hephaistos .aphrodite .hermes .hestia .hades {
     display:none;
 }
 
@@ -709,14 +705,6 @@ section.pantheon input[type="radio"]:checked + label {
     margin-left: 35px;
     margin-right: 35px;
 
-}
-
-section.pantheon input[type="radio"]:checked + label + .menu-texte {
-    display: block;
-}
-
-section.pantheon input[type="radio"]:checked + label + .menu-image {
-    display: block;
 }
 
 section.pantheon label {
@@ -733,9 +721,18 @@ section.pantheon img {
     border-radius: 5px;
 }
 
-section.pantheon h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 1rem;
+section.pantheon .zeus,
+section.pantheon .hera,
+section.pantheon .poseidon,
+section.pantheon .demeter,
+section.pantheon .ares,
+section.pantheon .athena,
+section.pantheon .apollo,
+section.pantheon .artemis,
+section.pantheon .hephaistos,
+section.pantheon .aphrodite,
+section.pantheon .hermes,
+section.pantheon .hestia {
+    display: none;
 }
 
